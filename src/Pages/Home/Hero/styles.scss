@@ -1,0 +1,21 @@
+#home {
+    margin: 0;
+    padding: 0;
+    .hero-title:first-of-type {
+        margin-top: 7rem;
+        margin-bottom: -2rem;
+    }
+    .hero-title:last-of-type {
+        margin-bottom: -.5rem;
+    }
+    .hero-text {
+        margin: 0rem 8rem 1.5rem 8rem;
+    }
+
+    .hero-btn {
+        margin-bottom: 3rem;
+        .icon {
+            margin-right: 1rem;
+        }
+    }
+}

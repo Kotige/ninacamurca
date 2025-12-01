@@ -1,3 +1,5 @@
+import "./styles.scss";
+
 export default function PrimaryBtn ({ children, onClick, href, target, className }) {
   // Se tiver "href", renderiza como <a>
     if (href) {
