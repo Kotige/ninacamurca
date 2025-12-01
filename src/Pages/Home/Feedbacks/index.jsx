@@ -3,7 +3,7 @@ import TitleH2 from "../../../Components/TitleH2";
 export default function Feedback() {
     return (
         <>
-            <section id="feedback" className="d-flex justify-content-around">
+            <section id="feedbacks" className="d-flex justify-content-around">
                 <div>
                     <TitleH2>
                         O que dizem sobre

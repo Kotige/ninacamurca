@@ -21,33 +21,33 @@ export default function Navbar() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 w-100 d-flex justify-content-center">
 
                         <li className="nav-item">
-                            <a className="nav-link" onClick={() => scrollToSection("home")}>
+                            <button className="nav-link" onClick={() => scrollToSection("home")}>
                                 Home
-                            </a>
+                            </button>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" onClick={() => scrollToSection("quem-sou")}>
+                            <button className="nav-link" onClick={() => scrollToSection("aboutme")}>
                                 Quem Sou
-                            </a>
+                            </button>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" onClick={() => scrollToSection("servicos")}>
+                            <button className="nav-link" onClick={() => scrollToSection("jobs")}>
                                 Serviços
-                            </a>
+                            </button>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" onClick={() => scrollToSection("feedbacks")}>
+                            <button className="nav-link" onClick={() => scrollToSection("feedbacks")}>
                                 Feedbacks
-                            </a>
+                            </button>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" onClick={() => scrollToSection("contato")}>
+                            <button className="nav-link" onClick={() => scrollToSection("contact")}>
                                 Contato
-                            </a>
+                            </button>
                         </li>
 
                     </ul>

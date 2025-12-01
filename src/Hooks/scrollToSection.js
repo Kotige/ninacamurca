@@ -1,11 +1,22 @@
-export function scrollToSection() {
-    const scrollToSectionId = (id) => {
-        const section = document.getElementById(id);
-        if (!section) return;
+import * as bootstrap from "bootstrap";
 
-        section.scrollIntoView({ behavior: 'smooth' });
-        window.history.replaceState(null, '', window.location.pathname);
-    };
+export function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (!section) return;
 
-    return { scrollToSectionId };
+    // Smooth scroll
+    section.scrollIntoView({ behavior: "smooth" });
+
+    // No hash
+    window.history.replaceState(null, "", window.location.pathname);
+
+    // Navbar collapse for mobile
+    const navbar = document.getElementById("navbarSupportedContent");
+
+    if (navbar && navbar.classList.contains("show")) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbar) 
+            || new bootstrap.Collapse(navbar, { toggle: false });
+
+        bsCollapse.hide();
+    }
 }

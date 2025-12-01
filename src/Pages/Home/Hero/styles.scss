@@ -1,21 +1,45 @@
+@use "../../../Styles/breakpoints.scss" as *;
+@use "../../../Styles/variables.scss";
+
 #home {
     margin: 0;
     padding: 0;
-    .hero-title:first-of-type {
-        margin-top: 7rem;
-        margin-bottom: -2rem;
+    .hero-title-present {
+        margin-bottom: -2.5rem;
     }
-    .hero-title:last-of-type {
-        margin-bottom: -.5rem;
+    .hero-title:first-of-type {
+        padding-right: .5rem;
     }
     .hero-text {
-        margin: 0rem 8rem 1.5rem 8rem;
+        text-align: center;
+        margin: 0rem 2rem 1.5rem 2rem;
     }
 
     .hero-btn {
         margin-bottom: 3rem;
         .icon {
             margin-right: 1rem;
+        }
+    }
+    @include up($lg) {
+        margin: 0 10rem;
+        .hero-full-title {
+            margin-left: -12rem;
+        }
+        .hero-title:first-of-type {
+            margin-bottom: -.8rem;
+        }
+
+        .hero-text {
+            text-align: start;
+            width: fit-content;
+            padding: 0 10rem 0 0;
+            margin-left: 8.35rem;
+        }
+
+        .hero-btn {
+            width: fit-content;
+            margin-left: -16rem;
         }
     }
 }
