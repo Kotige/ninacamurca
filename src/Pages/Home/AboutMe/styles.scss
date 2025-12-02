@@ -1,0 +1,28 @@
+@use "../../../Styles/breakpoints.scss" as *;
+@use "../../../Styles/variables.scss";
+
+#aboutme {
+    margin-top: 5rem;
+    padding: 5rem 0;
+    .about-title {
+        margin-bottom: 2rem;
+    }
+    .about-text {
+        padding: 3rem;
+        @include up($lg) {
+            padding: 1rem;
+            margin-left: 6rem;
+        }
+    }
+
+    .about-img {
+        display: block;
+        overflow: hidden;
+        width: 90%;
+        height: auto;
+        @include up($lg) {
+            margin-left: 1rem;
+            margin-right: .1rem;
+        }
+    }
+}
