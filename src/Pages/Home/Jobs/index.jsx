@@ -1,14 +1,18 @@
 import TitleH2 from "../../../Components/TitleH2";
-import Paragraph from "../../../Components/Paragraph"
+import Carousel from "../../../Components/Carousel";
+import "./styles.scss";
 
 export default function Jobs() {
     return (
         <>
-            <section id="jobs" className="d-flex justify-content-around">
-                <div>
+            <section id="jobs" className="d-flex justify-content-center row">
+                <div className="col-12">
                     <TitleH2>
                         O que eu faço
                     </TitleH2>
+                </div>
+                <div className="col-12">
+                    <Carousel />
                 </div>
             </section>
         </>

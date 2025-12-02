@@ -23,7 +23,7 @@ export default function Hero() {
                         </TitleH1>
                     </div>
                     <TitleH4 className="hero-text col-lg-12">
-                        Transformo ideias em imagens, estratégias e resultados.
+                        Transformo ideias em conteúdo, estratégias e resultados.
                     </TitleH4>
                     <PrimaryBtn 
                         href={"https://wiki.pokexgames.com/index.php/Illusion_Quest#Entrada_do_Covil-2"}

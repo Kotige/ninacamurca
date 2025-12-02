@@ -3,8 +3,8 @@ import "./styles.scss"
 
 export default function TitleH5({ children, className = "" }) {
     return (
-        <h4 className={` ${className}`}>
+        <h5 className={` ${className}`}>
             {children}
-        </h4>
+        </h5>
     );
 }

@@ -40,7 +40,7 @@ export default function Contact() {
                 </div>
                 <div>
                     <img 
-                        src="https://picsum.photos/300/300" 
+                        src="https://picsum.photos/100/100" 
                         alt="placeholder" 
                         className="rounded-pill"
                     />
