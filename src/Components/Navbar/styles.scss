@@ -1,13 +1,18 @@
 @use "../../Styles/variables" as *;
+@use "../../Styles/breakpoints.scss" as *;
 
 #navbar {
     z-index: 3;
-    background-color: transparent;
+    background-color: $hero-background;
     padding-top: 1.5rem;
     button {
         color: $brown-text;
         &:hover {
             color: $dark-text;
         }
+    }
+
+    @include up($lg) {
+        background-color: transparent;
     }
 }

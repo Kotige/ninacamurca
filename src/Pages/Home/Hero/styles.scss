@@ -3,7 +3,6 @@
 @use "../../../Styles/global.scss" as *;
 
 .background {
-    margin-top: -5rem;
     display: block;
     overflow: hidden;
     z-index: -1;
@@ -16,6 +15,7 @@
     }
 
     @include up($lg) {
+        margin-top: -5rem;
         margin-bottom: -25rem;
 
         img {
