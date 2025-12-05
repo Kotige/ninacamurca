@@ -1,3 +1,13 @@
+@use "../../Styles/variables" as *;
+
 #navbar {
-    margin-top: 1.5rem;
+    z-index: 3;
+    background-color: transparent;
+    padding-top: 1.5rem;
+    button {
+        color: $brown-text;
+        &:hover {
+            color: $dark-text;
+        }
+    }
 }
