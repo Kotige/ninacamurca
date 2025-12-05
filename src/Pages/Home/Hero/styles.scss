@@ -3,44 +3,51 @@
 @use "../../../Styles/global.scss";
 
 #home {
-    margin: 0;
-    padding: 0;
     .hero-title-present {
-        margin-bottom: -2.5rem;
+        margin-bottom: -1.5rem;
     }
-    .hero-title:first-of-type {
-        padding-right: .5rem;
-    }
+
     .hero-text {
-        text-align: center;
-        margin: 0rem 2rem 1.5rem 2rem;
+        font-size: 1.35rem;
+        margin-top: -1rem;
     }
 
     .hero-btn {
-        margin-bottom: 3rem;
         .icon {
             margin-right: 1rem;
         }
     }
+
+    .hero-img {
+        width: 70%;
+    }
+
     @include up($lg) {
-        margin: 0 10rem;
-        .hero-full-title {
-            margin-left: -12rem;
+
+
+        .hero-img {
+            margin-top: 2rem;
+            margin-left: 8rem;
+            width: 40%;
+        }
+
+        .hero-title-present {
+            margin-bottom: -2rem;
         }
         .hero-title:first-of-type {
             margin-bottom: -.8rem;
         }
 
+        .hero-title:last-of-type {
+            margin-bottom: -.8rem;
+        }
+
         .hero-text {
-            text-align: start;
-            width: fit-content;
-            padding: 0 10rem 0 0;
-            margin-left: 8.35rem;
+            font-size: 1.15rem;
         }
 
         .hero-btn {
             width: fit-content;
-            margin-left: -16rem;
         }
     }
 }

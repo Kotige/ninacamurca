@@ -2,6 +2,7 @@ import TitleH2 from "../../../Components/TitleH2";
 import Paragraph from "../../../Components/Paragraph"
 import PrimaryBtn from "../../../Components/PrimaryBtn";
 import BootstrapIcon from "../../../Components/BootstrapIcon";
+import "./styles.scss";
 
 export default function Contact() {
     return (
