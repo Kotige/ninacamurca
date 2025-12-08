@@ -1,6 +1,7 @@
 import TitleH2 from "../../../Components/TitleH2";
 import Paragraph from "../../../Components/Paragraph"
 import ninaFoto from "../../../assets/images/nina-foto.JPG";
+import palette from "../../../assets/images/palette.png"
 import "./styles.scss"
 
 export default function AboutMe() {
@@ -34,6 +35,13 @@ export default function AboutMe() {
                     />
                 </div>
             </section>
+            <div>
+                <img 
+                    src={palette} 
+                    className="palette d-none d-lg-block"
+                    alt="Detalhe fixo do canto esquerdo em telas grandes" 
+                />
+            </div>
         </>
     )
 }
