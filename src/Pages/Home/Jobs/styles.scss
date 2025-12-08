@@ -4,7 +4,7 @@
 
 #jobs {
     margin: 0;
-    margin-top: -5rem;
+    // margin-top: -7rem;
     padding: 0;
     padding-top: 6rem;
     color: $light-text;
@@ -12,7 +12,8 @@
 
     .jobs-title {
         @include up($lg) {
-            padding-left: 3rem;
+            padding-left: 13rem;
+            margin-bottom: 1rem;
         }
     }
 }

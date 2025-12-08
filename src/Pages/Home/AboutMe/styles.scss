@@ -27,11 +27,16 @@
             width: 100%;
         }
     }
+
+    @include up($lg) {
+        padding: 3rem 0 0 10.5rem;
+    }
 }
 
 .palette {
     width: 1%;
     height: 120vh;
-    margin-top: -43.1rem;
+    margin-top: -41rem;
+    margin-bottom: -7rem;
     //padding-bottom: 1rem;
 }

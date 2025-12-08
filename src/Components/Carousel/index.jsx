@@ -3,6 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TitleH5 from "./TitleH5";
 import DescriptionP from "./DescriptionP";
+import cover1 from "../../assets/images/cover1.png";
+import cover2 from "../../assets/images/cover2.png";
+import cover3 from "../../assets/images/cover3.png";
+import cover4 from "../../assets/images/cover4.png";
+import cover5 from "../../assets/images/cover5.png";
+import cover6 from "../../assets/images/cover6.png";
 import "./styles.scss";
 
 export default function Carousel() {
@@ -11,48 +17,48 @@ export default function Carousel() {
             title: "Cobertura Fotográfica",
             description:
                 "Registro fotográfico profissional de eventos corporativos, culturais, sociais ou institucionais.",
-            image: "https://picsum.photos/250/250",
+            image: cover1,
             link: "https://google.com",
         },
         {
             title: "Reels (Redes Sociais)",
             description:
                 "Criação de vídeos dinâmicos e profissionais para marcas, eventos, campanhas e redes sociais.",
-            image: "https://picsum.photos/250/250",
+            image: cover2,
             link: "https://google.com",
         },
         {
             title: "Aftermovie/Institucional",
             description:
                 "Produção de vídeos em formato aftermovie ou mini-documentário, perfeitos para registrar a essência de eventos, projetos e histórias.",
-            image: "https://picsum.photos/250/250",
+            image: cover3,
             link: "https://google.com",
         },
         {
             title: "Ensaio de Produto",
             description:
                 "Fotografia de produtos com composição cuidadosa, iluminação adequada e estética alinhada ao posicionamento da marca.",
-            image: "https://picsum.photos/250/250",
+            image: cover4,
             link: "https://google.com",
         },
         {
             title: "Tráfego Pago",
             description: "Gerenciamento de campanhas de tráfego paago para anúncios em Meta Ads e outras plataformas.",
-            image: "https://picsum.photos/250/250",
+            image: cover5,
             link: "https://google.com",
         },
         {
             title: "Social Midia",
             description:
                 "Criação e gestão de conteúdos visuais completos para redes sociais: fotos, vídeos, reels, animações ou peças personalizadas.",
-            image: "https://picsum.photos/250/250",
+            image: cover6,
             link: "https://google.com",
         },
         {
             title: "ADS",
             description:
                 "Gestão estratégica e criação de anúncios feitos para maximizar alcance, atrair o público certo e potencializar resultados.",
-            image: "https://picsum.photos/250/250",
+            image: cover6,
             link: "https://google.com",
         },
     ];
@@ -135,11 +141,13 @@ export default function Carousel() {
                     <Col lg="5" className="carousel-item-desktop">
                         <TitleH5 className="current-title">{items[rightIndex].title}</TitleH5>
                         <DescriptionP className="desktop-description">{items[rightIndex].description}</DescriptionP>
-                        <img
-                            src={items[rightIndex].image}
-                            alt={items[rightIndex].title}
-                            className="carousel-image"
-                        />
+                        <div className="carousel-img-div w-100 d-flex justify-content-start">
+                            <img
+                                src={items[rightIndex].image}
+                                alt={items[rightIndex].title}
+                                className="carousel-image"
+                            />
+                        </div>
                     </Col>
 
                     <Col lg="1" className="d-flex justify-content-center">

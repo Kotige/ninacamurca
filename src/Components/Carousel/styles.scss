@@ -1,5 +1,5 @@
 @use "../../Styles/breakpoints" as *;
-@use "../../Styles/variables.scss";
+@use "../../Styles/variables.scss" as *;
 
 .carousel-services {
     text-align: center;
@@ -14,8 +14,9 @@
     }
 
     .carousel-image {
-        width: 100%;
-        max-width: 260px;
+        min-width: 400px;
+        height: 400px;
+        //max-width: 560px;
         border-end-end-radius: 35px;
         border-top-right-radius: 35px;
     }
