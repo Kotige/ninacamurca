@@ -1,12 +1,13 @@
 import TitleH2 from "../../../Components/TitleH2";
 import Paragraph from "../../../Components/Paragraph"
+import ninaFoto from "../../../assets/images/nina-foto.JPG";
 import "./styles.scss"
 
 export default function AboutMe() {
     return (
         <>
-            <section id="aboutme" className="row align-items-center justify-content-center justify-content-lg-between">
-                <div className="about-text col-12 col-lg-4">
+            <section id="aboutme" className="row align-items-center justify-content-center">
+                <div className="about-text col-12 col-lg-6">
                     <TitleH2 className="about-title">
                         Sobre mim
                     </TitleH2>
@@ -25,10 +26,10 @@ export default function AboutMe() {
                         conectam marcas ao seu público com <b>autenticidade e impacto</b>.
                     </Paragraph>
                 </div>
-                <div className="col-12 col-lg-7">
+                <div className="about-img-div col-12 col-lg-6 d-flex justify-content-lg-end bg-warning">
                     <img 
-                        src="https://picsum.photos/350/200"
-                        alt="placeholder" 
+                        src={ninaFoto}
+                        alt="Nina Camurça segurando uma câmera fotográfica em frente ao rosto." 
                         className="about-img"
                     />
                 </div>

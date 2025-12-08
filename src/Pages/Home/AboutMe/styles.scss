@@ -1,30 +1,30 @@
 @use "../../../Styles/breakpoints.scss" as *;
-@use "../../../Styles/variables.scss";
+@use "../../../Styles/variables.scss" as *;
 @use "../../../Styles/global.scss";
 
 #aboutme {
-    width: 100vw;
-    margin-top: 5rem;
-    padding: 5rem 0;
+    margin: 0;
+    padding: 0;
+    padding: 3rem 0;
+    color: $light-text;
+    background-color: $dark-background;
     .about-title {
         margin-bottom: 2rem;
     }
     .about-text {
         padding: 3rem;
-        @include up($lg) {
-            padding: 1rem;
-            margin-left: 6rem;
-        }
+    }
+
+    .about-img-div {
+        margin: 0;
+        padding: 0;
     }
 
     .about-img {
-        display: block;
-        overflow: hidden;
-        width: 90%;
+        width: 100vw;
         height: auto;
         @include up($lg) {
-            margin-left: 1rem;
-            margin-right: .1rem;
+            width: 100%;
         }
     }
 }
