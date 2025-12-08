@@ -6,7 +6,7 @@ export default function Jobs() {
     return (
         <>
             <section id="jobs" className="d-flex justify-content-center row">
-                <div className="col-12">
+                <div className="col-12 jobs-title">
                     <TitleH2>
                         O que eu faço
                     </TitleH2>
