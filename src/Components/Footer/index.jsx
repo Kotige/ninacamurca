@@ -1,3 +1,5 @@
+import modv from "../../assets/images/modv.png";
+
 import "./styles.scss";
 
 export default function Footer() {
@@ -7,14 +9,14 @@ export default function Footer() {
             <div>
                 <a href="https://modvestudio.com.br/" target='_blank'>
                     <img 
-                        src="https://picsum.photos/50/30" 
+                        src={modv}
                         alt="placeholder" 
-                        className='modv'
+                        className="w-25 mb-3"
                     />
                 </a>
             </div>
-            <div>
-                <small> © {new Date().getFullYear()}. Todos os direitos reservados.</small>
+            <div className="footer-text">
+                <small> © {new Date().getFullYear()} modv estúdio. Todos os direitos reservados.</small>
             </div>
         </div>
         </footer>

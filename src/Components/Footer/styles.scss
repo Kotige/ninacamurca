@@ -1,0 +1,14 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/breakpoints.scss" as *;
+
+#footer {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    background-image: url("../../assets/images/background-fundo-marrom.png");
+    background-size: cover;
+    background-color: $hero-background;
+
+    .footer-text{
+        color: $darker-text;
+    }
+}
