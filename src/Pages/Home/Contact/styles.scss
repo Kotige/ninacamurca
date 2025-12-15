@@ -1,0 +1,39 @@
+@use "../../../Styles/breakpoints.scss" as *;
+@use "../../../Styles/variables.scss" as *;
+@use "../../../Styles/global.scss" as *;
+
+#contact {
+    background-color: $hero-background;
+
+    .contact-title {
+        color: $dark-text;
+        font-size: 2rem;
+    }
+
+    .contact-paragraph {
+        color: $darker-text;
+        padding: 1rem 5rem;
+    }
+
+    .contact-img {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+    .contact-link {
+        padding: 0 .5rem;
+        font-size: 2rem;
+        color: $light-text;
+        background-color: $dark-background;
+        border-radius: 10px;
+    }
+
+    .contact-info {
+        a {
+            font-size: 1.5rem;
+            color: $dark-text;
+            text-decoration: none;
+        }
+        margin-bottom: 4rem;
+    }
+}
