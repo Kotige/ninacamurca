@@ -4,6 +4,15 @@
 
 #contact {
     background-color: $hero-background;
+    margin: 0;
+    overflow: hidden;
+
+    .container-lg {
+        overflow: hidden;
+        @include up($lg) {
+            margin-left: 20rem;
+        }
+    }
 
     .contact-title {
         color: $dark-text;
@@ -13,11 +22,18 @@
     .contact-paragraph {
         color: $darker-text;
         padding: 1rem 5rem;
+        @include up($lg) {
+            padding: 0 13rem 1rem 0;
+        }
     }
 
     .contact-img {
         width: 60%;
         margin-bottom: 2rem;
+        @include up($lg) {
+            margin-left: -20rem;
+            width: 70%;
+        }
     }
 
     .contact-link {
@@ -26,14 +42,28 @@
         color: $light-text;
         background-color: $dark-background;
         border-radius: 10px;
+        &:hover {
+            background-color: $btn-background;
+        }
+        @include up($lg) {
+            margin-top: 4rem;
+            font-size: 1.5rem;
+            border-radius: 7px;
+        }
     }
 
     .contact-info {
+        margin-bottom: 4rem;
         a {
             font-size: 1.5rem;
             color: $dark-text;
             text-decoration: none;
+            @include up($lg) {
+                font-size: .9rem;
+            }
         }
-        margin-bottom: 4rem;
+        @include up($lg) {
+            margin-top: 4rem;
+        }
     }
 }
