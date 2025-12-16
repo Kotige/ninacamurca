@@ -1,51 +1,64 @@
+import { useState } from "react";
 import { scrollToSection } from "../../Hooks/scrollToSection";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./styles.scss";
 
 export default function Navbar() {
-    return (
-        <nav className="navbar navbar-expand-lg" id="navbar">
-            <div className="container">
-                {/* <a className="navbar-brand fw-bold" href="#home">Artista</a> */}
+    const [isOpen, setIsOpen] = useState(false);
 
+    const toggleMenu = () => {
+        setIsOpen(prev => !prev);
+    };
+
+    const handleLinkClick = (section) => {
+        scrollToSection(section);
+        setIsOpen(false);
+    };
+
+    return (
+        <nav className="navbar navbar-expand-lg navbar-dark" id="navbar">
+            <div className="container">
+
+                {/* BOTÃO HAMBURGUER */}
                 <button
-                    className="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
+                    className="navbar-toggler"
+                    onClick={toggleMenu}
+                    aria-expanded={isOpen}
+                    //aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 w-100 d-flex justify-content-center">
+                {/* MENU */}
+                <div className={`navbar-collapse navbar-collapse-animated ${isOpen ? "show" : ""}`}>
+                    <ul className="navbar-nav ms-auto gap-3 w-100 justify-content-center">
 
                         <li className="nav-item">
-                            <button className="nav-link" onClick={() => scrollToSection("home")}>
+                            <button className="nav-link" onClick={() => handleLinkClick("home")}>
                                 Home
                             </button>
                         </li>
 
                         <li className="nav-item">
-                            <button className="nav-link" onClick={() => scrollToSection("aboutme")}>
+                            <button className="nav-link" onClick={() => handleLinkClick("aboutme")}>
                                 Quem Sou
                             </button>
                         </li>
 
                         <li className="nav-item">
-                            <button className="nav-link" onClick={() => scrollToSection("jobs")}>
+                            <button className="nav-link" onClick={() => handleLinkClick("jobs")}>
                                 Serviços
                             </button>
                         </li>
 
                         <li className="nav-item">
-                            <button className="nav-link" onClick={() => scrollToSection("feedbacks")}>
+                            <button className="nav-link" onClick={() => handleLinkClick("feedbacks")}>
                                 Feedbacks
                             </button>
                         </li>
 
                         <li className="nav-item">
-                            <button className="nav-link" onClick={() => scrollToSection("contact")}>
+                            <button className="nav-link" onClick={() => handleLinkClick("contact")}>
                                 Contato
                             </button>
                         </li>
