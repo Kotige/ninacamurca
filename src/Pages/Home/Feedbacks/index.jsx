@@ -1,5 +1,6 @@
 import TitleH2 from "../../../Components/TitleH2";
 import GalleryMobile from "../../../Components/GalleryMobile";
+import Gallery from "../../../Components/Gallery";
 import faixa from "../../../assets/images/background.png"
 import "./styles.scss"
 
@@ -46,7 +47,7 @@ export default function Feedback() {
                     <TitleH2>
                         meu trabalho
                     </TitleH2>
-                    <GalleryMobile images={images} />
+                    <Gallery />
                 </div>
                 <div className="d-none d-lg-block gallery-desktop">
                     <TitleH2>
@@ -55,6 +56,7 @@ export default function Feedback() {
                     <TitleH2>
                         meu trabalho
                     </TitleH2>
+                    <Gallery />
                 </div>
             </section>
         </>

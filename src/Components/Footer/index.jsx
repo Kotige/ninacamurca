@@ -10,8 +10,9 @@ export default function Footer() {
                 <a href="https://modvestudio.com.br/" target='_blank'>
                     <img 
                         src={modv}
-                        alt="placeholder" 
-                        className="w-25 mb-3"
+                        alt="modv estúdio"
+                        id="modv-logo"
+                        className="mb-3"
                     />
                 </a>
             </div>
