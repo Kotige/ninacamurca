@@ -4,12 +4,50 @@
 
 #feedbacks{
     margin: 0;
-    padding: 3rem;
+    //padding: 3rem;
     background-color: $hero-background;
     .gallery-mobile {
         padding: 2rem;
         height: 120vh;
         border: 1.5px solid $light-brown;
         border-radius: 5rem 5rem 0 0;
+    }
+
+    .div-faixa {
+        height: 7.5rem;
+        background-image: linear-gradient(rgba(242, 230, 216, 0.5), rgba(242, 230, 216, 0.5)), 
+            url("../../../assets/images/background.png");
+        background-size: cover;
+    }
+
+    .gallery-desktop {
+        .feedback-container {
+            height: 65vh;
+            border: 1px solid $light-brown;
+            border-radius: 0 45px 45px 0;
+            margin: 1rem 10rem 5rem 10rem;
+            overflow: hidden;
+
+            .gallery-content {
+                width: 95%;
+            }
+
+            .div-palette {
+                overflow: hidden;
+                width: 5%;
+                padding: 0;
+                background-image: url("../../../assets/images/rpalette.png");
+                background-size: contain;
+                //background-repeat: no-repeat;
+                //background-position: 100% 70%;
+                .palette {
+                    display: none;
+                    width: 100%;
+
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+            }
+        }
     }
 }
