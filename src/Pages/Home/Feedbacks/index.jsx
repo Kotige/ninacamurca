@@ -1,7 +1,9 @@
 import TitleH2 from "../../../Components/TitleH2";
 import GalleryDesktop from "../../../Components/GalleryDesktop";
-import palette from "../../../assets/images/palette.png"
+import ImageMosaic from "../../../Components/ImageMosaic";
+
 import "./styles.scss"
+
 
 export default function Feedback() {
 
@@ -21,11 +23,18 @@ export default function Feedback() {
                     </TitleH2>
 
                     <div className="feedback-container d-flex">
-                        <div className="gallery-content">
-                            <GalleryDesktop />
+                        <div className="gallery-content p-4">
+                            {/* <GalleryDesktop /> */}
+                            <ImageMosaic 
+                                images={[
+                                    "/gallery/feedback1.jpeg",
+                                    "/gallery/feedback2.jpeg",
+                                    "/gallery/feedback3.jpeg",
+                                    "/gallery/feedback4.jpeg"
+                                ]}
+                            />
                         </div>
                         <div className="div-palette">
-                            <img src={palette} alt="paleta de cores decorativa" className="palette"/>
                         </div>
                     </div>
 
