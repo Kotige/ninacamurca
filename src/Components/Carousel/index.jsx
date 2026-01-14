@@ -9,6 +9,8 @@ import cover3 from "../../assets/images/cover3.png";
 import cover4 from "../../assets/images/cover4.png";
 import cover5 from "../../assets/images/cover5.png";
 import cover6 from "../../assets/images/cover6.png";
+import cover7 from "../../assets/images/cover7.png";
+import cover8 from "../../assets/images/cover8.png";
 import "./styles.scss";
 
 export default function Carousel() {
@@ -44,7 +46,7 @@ export default function Carousel() {
         {
             title: "Tráfego Pago",
             description: "Gerenciamento de campanhas de tráfego paago para anúncios em Meta Ads e outras plataformas.",
-            image: cover5,
+            image: cover7,
             link: "https://google.com",
         },
         {
@@ -58,7 +60,7 @@ export default function Carousel() {
             title: "ADS",
             description:
                 "Gestão estratégica e criação de anúncios feitos para maximizar alcance, atrair o público certo e potencializar resultados.",
-            image: cover6,
+            image: cover8,
             link: "https://google.com",
         },
     ];

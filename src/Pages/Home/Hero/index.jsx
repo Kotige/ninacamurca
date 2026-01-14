@@ -34,7 +34,7 @@ export default function Hero() {
                         Transformo ideias em conteúdo, estratégias e resultados.
                     </TitleH4>
                     <PrimaryBtn 
-                        href={"https://wiki.pokexgames.com/index.php/Illusion_Quest#Entrada_do_Covil-2"}
+                        href={"https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os."}
                         className="hero-btn mb-5 ms-lg-2"
                     >
                         <BootstrapIcon 
