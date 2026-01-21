@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import "./styles.scss";
 
@@ -12,44 +12,64 @@ export default function ServiceGallery({gallery}) {
         );
     }
 
+    const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    function togglePlay() {
+        const video = videoRef.current;
+        if (!video) return;
+
+        if (video.paused) {
+            video.play();
+            setIsPlaying(true);
+        } else {
+            video.pause();
+            setIsPlaying(false);
+        }
+    }
+
     return (
         <section className="container service-gallery p-0">
-            <div className="row align-items-top p-0">
+            <div className="row">
+                {/* Legenda e Controles  */}
+                <div className="col-md-8 order-1 order-md-2 text-block">
+                    <div>
+                        <h3>{gallery.title}</h3>
+                        <p>{gallery.description}</p>
+                    </div>
+                    <button className="gallery-next"
+                        onClick={nextMedia}
+                        aria-label="Próximo"
+                    >
+                        →
+                    </button>
+                </div>
                 {/* Mídia  */}
-                <div className="col-md-6 mb-4 mb-md-0 p-0">
+                <div className="col-md-4 order-2 order-md-1 media">
                     {currentMedia.type === "image" && (
                         <img src={currentMedia.src} 
                             alt=""
-                            className="image p-0" 
+                            className="image" 
                         />
                     )}
 
                     {currentMedia.type === "video" && (
-                        <video 
-                            src={currentMedia.src}
-                            className="video p-0"
-                            coltrols
-                        />
-                    )}
-                </div>
+                        <div className="video-wrapper">
+                            <video 
+                                src={currentMedia.src}
+                                className="video"
+                                ref={videoRef}
+                                playsInline
+                            />
 
-                {/* Legenda e controle  */}
-                <div className="col-md-6">
-                    <div className="justify-content-center align-items-center">
-                        <div className="">
-                            <h3>{gallery.title}</h3>
-                            <p className="text-center text-md-start p-0">{gallery.description}</p>
-                        </div>
-
-                        <div className="">
-                            <button className="gallery-next"
-                                onClick={nextMedia}
-                                aria-label="Próximo"
+                            <button className="video-control"
+                                onClick={togglePlay}
+                                aria-label="Play/Pause"
                             >
-                                →
+                                {isPlaying ? "❚❚" : "▶"}
                             </button>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
         </section>

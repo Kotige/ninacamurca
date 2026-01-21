@@ -36,8 +36,10 @@ export default function ServicePage() {
                 imageAlt={service.title}
             />
 
-            <div id="gallery-container">
-                <ServiceGallery gallery={service.gallery} />
+            <div className="d-flex justify-content-center">
+                <div id="gallery-container">
+                    <ServiceGallery gallery={service.gallery} />
+                </div>
             </div>
 
             <Contact />

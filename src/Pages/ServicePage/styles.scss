@@ -3,6 +3,7 @@
 @use "../../Styles/global.scss";
 
 #service-pages {
+    overflow: hidden;
     background-color: $beige;
     background-image:
     linear-gradient(rgba(242, 230, 216, 0.3), rgba(242, 230, 216, 0.3)),
@@ -12,13 +13,20 @@
     background-size: contain;
 
     #gallery-container {
-        display: flex;
-        margin: 5rem;
-        height: fit-content;
-        width: fit-content;
+        // display: flex;
+        margin: 3rem 1rem;
+        width: 100%;
         background-color: $dark-brown;
         padding: 0;
-        overflow: hidden;
+        // overflow: hidden;
         border-radius: 0 35px 35px 0;
+        height: auto;
+        overflow: visible;
+        @include up($md) {
+            margin: 5rem;
+            height: 70vh;
+            width: 70vw;
+            overflow: hidden;
+        }
     }
 }
