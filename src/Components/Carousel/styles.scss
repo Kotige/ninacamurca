@@ -1,0 +1,84 @@
+@use "../../Styles/breakpoints" as *;
+@use "../../Styles/variables.scss" as *;
+
+.carousel-services {
+    text-align: center;
+
+    // mobile always shows only ONE item
+    .carousel-mobile {
+        display: block;
+    }
+
+    .carousel-desktop {
+        display: none;
+    }
+
+    .carousel-image {
+        width: 350px;
+        height: 350px;
+        border-end-end-radius: 35px;
+        border-top-right-radius: 35px;
+
+        @include up($lg) {
+            min-width: 400px;
+            height: 400px;
+        }
+    }
+
+    .arrow {
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:active {
+            transform: scale(0.9);
+            opacity: 0.6;
+        }
+    }
+
+    .carousel-item-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    }
+
+    .current-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .titles-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+
+        .title-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    // DESKTOP (lg UP)
+    @include up($lg) {
+        .carousel-mobile {
+            display: none;
+        }
+        .carousel-desktop {
+            display: block;
+        }
+
+        .carousel-image {
+            max-width: 320px;
+        }
+    }
+}

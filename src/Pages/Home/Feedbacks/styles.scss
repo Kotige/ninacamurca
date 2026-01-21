@@ -1,0 +1,74 @@
+@use "../../../Styles/breakpoints.scss" as *;
+@use "../../../Styles/variables.scss" as *;
+@use "../../../Styles/global.scss";
+
+#feedbacks{
+    margin: 0;
+    background-color: $hero-background;
+    padding-bottom: 13rem;
+    @include up($lg) {
+        padding-bottom: 3rem;
+    }
+    .gallery-mobile {
+        padding: 2rem;
+        height: 120vh;
+        .mobile-feed-container {
+            border: 1px solid $light-brown;
+            border-radius: 5rem 5rem 0 0;
+            height: fit-content;
+        }
+    }
+
+    .div-faixa {
+        height: 7.5rem;
+        background-image: linear-gradient(rgba(242, 230, 216, 0.5), rgba(242, 230, 216, 0.5)), 
+            url("../../../assets/images/background.png");
+        background-size: cover;
+    }
+
+    .gallery-desktop {
+        .feedback-container {
+            height: 65vh;
+            border: 1px solid $light-brown;
+            border-radius: 0 45px 45px 0;
+            margin: 1rem 10rem 5rem 10rem;
+            overflow: hidden;
+
+            .gallery-content {
+                width: 95%;
+            }
+
+            .div-palette {
+                overflow: hidden;
+                width: 5%;
+                padding: 0;
+                background-image: url("../../../assets/images/rpalette.png");
+                background-size: contain;
+                //background-repeat: no-repeat;
+                //background-position: 100% 70%;
+                .palette {
+                    display: none;
+                    width: 100%;
+
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+            }
+        }
+    }
+}
+
+.img {
+    width: 80%;
+    height: 80%;
+}
+
+.title {
+    color: $brown;
+}
+
+.title-desktop {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 12.5rem;
+}

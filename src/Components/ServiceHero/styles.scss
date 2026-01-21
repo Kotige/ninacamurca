@@ -1,0 +1,16 @@
+@use "../../Styles/breakpoints.scss" as *;
+@use "../../Styles/variables.scss" as *;
+@use "../../Styles/global.scss";
+
+#service-hero {
+    background-color: $dark-brown;
+    padding: 0;
+    p {
+
+        color: $beige;
+        strong {
+            font-weight: 400;
+            color: $light-brown;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use "../../Styles/breakpoints.scss" as *;
+@use "../../Styles/variables.scss" as *;
+@use "../../Styles/global.scss";
+
+.service-gallery{
+    .gallery-next {
+        background: none;
+        color: $light-brown;
+        margin-left: 45%;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover{
+            transform: translateX(4px);
+        }
+    }
+
+    h3 {
+        padding: 0;
+        margin-top: 5rem;
+        margin-left: 2rem;
+        color: $light-brown;
+        font-size: 1.3rem;
+    }
+
+    p {
+        color: $beige;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .image,.video {
+        height: 50vh;
+        width: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+}

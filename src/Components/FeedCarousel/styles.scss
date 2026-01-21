@@ -1,0 +1,17 @@
+@use "../../Styles/breakpoints.scss" as *;
+@use "../../Styles/variables.scss" as *;
+@use "../../Styles/global.scss";
+
+#feedCarousel {
+    .carousel-control-prev {
+        left: -60px;
+    }
+
+    .carousel-control-next {
+        right: -60px;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-image: none;
+    }
+}

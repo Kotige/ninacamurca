@@ -1,0 +1,24 @@
+@use "../../Styles/breakpoints.scss" as *;
+@use "../../Styles/variables.scss" as *;
+@use "../../Styles/global.scss";
+
+#service-pages {
+    background-color: $beige;
+    background-image:
+    linear-gradient(rgba(242, 230, 216, 0.3), rgba(242, 230, 216, 0.3)),
+        url("../../assets/images/background-fundo-marrom.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    #gallery-container {
+        display: flex;
+        margin: 5rem;
+        height: fit-content;
+        width: fit-content;
+        background-color: $dark-brown;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 0 35px 35px 0;
+    }
+}

@@ -1,0 +1,42 @@
+@use "../../../Styles/breakpoints.scss" as *;
+@use "../../../Styles/variables.scss" as *;
+@use "../../../Styles/global.scss";
+
+#aboutme {
+    margin: 0;
+    padding: 0;
+    padding: 3rem 0;
+    color: $light-text;
+    background-color: $dark-background;
+    .about-title {
+        margin-bottom: 2rem;
+    }
+    .about-text {
+        padding: 3rem;
+    }
+
+    .about-img-div {
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-img {
+        width: 100vw;
+        height: auto;
+        @include up($lg) {
+            width: 100%;
+        }
+    }
+
+    @include up($lg) {
+        padding: 3rem 0 0 10.5rem;
+    }
+}
+
+.palette {
+    width: 1%;
+    height: 120vh;
+    margin-top: -41rem;
+    margin-bottom: -7rem;
+    //padding-bottom: 1rem;
+}

@@ -1,0 +1,15 @@
+@use "../../Styles/breakpoints.scss" as *;
+@use "../../Styles/variables.scss" as *;
+@use "../../Styles/global.scss";
+
+.service-title-container {
+    .service-title {
+        margin-top: 3rem;
+        background-color: $brown;
+        color: $beige;
+        font-size: 1.8rem;
+        width: fit-content;
+        padding: .2rem 1rem;
+        border-radius: 0 20px 20px 0;
+    }
+}

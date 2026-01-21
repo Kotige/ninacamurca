@@ -1,0 +1,20 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/breakpoints.scss" as *;
+
+#footer {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    background-image:
+    linear-gradient(rgba(242, 230, 216, 0.8), rgba(242, 230, 216, 0.3)),
+        url("../../assets/images/background-fundo-marrom.png");
+    background-size: cover;
+    background-color: $hero-background;
+
+    .footer-text{
+        color: $darker-text;
+    }
+
+    #modv-logo {
+        width: 15%;
+    }
+}

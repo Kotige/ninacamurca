@@ -1,0 +1,19 @@
+@use "../../../Styles/breakpoints.scss" as *;
+@use "../../../Styles/variables.scss" as *;
+@use "../../../Styles/global.scss";
+
+#jobs {
+    margin: 0;
+    // margin-top: -7rem;
+    padding: 0;
+    padding-top: 6rem;
+    color: $light-text;
+    background-color: $dark-background;
+
+    .jobs-title {
+        @include up($lg) {
+            padding-left: 13rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

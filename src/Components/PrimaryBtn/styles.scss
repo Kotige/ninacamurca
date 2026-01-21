@@ -1,0 +1,13 @@
+@use "../../Styles/variables" as *;
+
+.btn-primary {
+    background-color: $btn-background;
+    color: $light-text;
+    border: none;
+    border-radius: 0px 10px 10px 0;
+    font-size: 1.3rem;
+    padding: .3rem 2.5rem;
+    &:hover {
+        background-color: $light-brown;
+    }
+}
