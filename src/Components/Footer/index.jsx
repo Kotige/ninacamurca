@@ -15,14 +15,14 @@ export default function Footer() {
                     <img 
                         src={modv}
                         alt="modv estúdio"
-                        className="w-[25%] md:w-[15%]"
+                        className="w-[35%] md:w-[20%]"
                         loading="lazy"
                         aria-label="Site da modv estúdio" 
                     />
                 
                 </a>
-                <p className="text-sm"> 
-                    © 2025 <a href="https://modvestudio.com.br/" target="_blank" rel="noopener noreferrer">modv estúdio</a>. Todos os direitos reservados.
+                <p className="text-sm text-center mb-6 md:mb-0"> 
+                    © 2025 <a href="https://modvestudio.com.br/" target="_blank" rel="noopener noreferrer">modv estúdio</a>. <br className="block md:hidden" /> Todos os direitos reservados.
                 </p>
             </div>
         </footer>
