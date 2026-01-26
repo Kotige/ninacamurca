@@ -6,8 +6,8 @@ import palette from "../../../assets/images/feedbacks/rpalette.png";
 export default function Feedbacks() {
     return (
         <section id="feedbacks" className="relative z-10 w-full  lg:mt-0 py-26 overflow-hidden">
-            <div id="feedbacks-mobile" className="md:hidden border mx-16 py-8 block ">
-                <h2 className="text-3xl text-center">
+            <div id="feedbacks-mobile" className="md:hidden border rounded-t-[50px] mx-8 pt-8 block ">
+                <h2 className="text-2xl text-center">
                     O que dizem sobre  <br /> meu trabalho
                 </h2>
                 <FeedbacksCarousel />

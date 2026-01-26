@@ -12,11 +12,11 @@ export default function FeedbacksCarousel() {
     }
 
     return (
-        <section className="w-full h-[100vh] relative flex items-center justify-center pt-4">
+        <section className="w-full h-[80vh] relative flex items-center justify-center">
             {/* Images Container  */}
             <div className="w-full h-full  flex items-center justify-center">
                 {/* Active Image  */}
-                <div className="h-full max-h-[90vw] aspect-[3/4] overflow-hidden">
+                <div className="h-full max-h-[100vw] aspect-[3/4] overflow-hidden">
                     <img 
                         src={images[activeIndex]} 
                         alt={`Imagem ${activeIndex + 1}`}
