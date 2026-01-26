@@ -99,7 +99,7 @@ export default function ServicesCarousel() {
                             </p>
 
                             <button
-                                onClick={() => handleNavigate(activeItem.slug)}
+                                onClick={() => handleNavigate(item.slug)}
                                 className="w-full max-w-[25vw]"
                             >
                                 <div className="aspect-square overflow-hidden rounded-img">
