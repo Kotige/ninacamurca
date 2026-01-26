@@ -1,21 +1,25 @@
-import Navbar from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar"
 import Hero from "./Hero"
-import AboutMe from "./AboutMe"
-import Jobs from "./Jobs"
-import Feedback from "./Feedbacks";
-import Contact from "./Contact";
-import Footer from "../../Components/Footer";
+import About from "./About"
+import Services from "./Services"
+import Feedbacks from "./Feedback"
+import Contact from "./Contact"
+import Footer from "../../Components/Footer"
+
+import "./styles.scss"
 
 export default function Home() {
     return (
-        <>
-            <Navbar />
-            <Hero />
-            <AboutMe />
-            <Jobs />
-            <Feedback />
-            <Contact />
-            <Footer />
-        </>
+        <main className="main-home">
+            <div className="z-10">
+                <Navbar />
+                <Hero />
+                <About />
+                <Services />
+                <Feedbacks />
+                <Contact />
+                <Footer />
+            </div>
+        </main>
     )
 }

@@ -1,118 +1,150 @@
-import TitleH2 from "../../../Components/TitleH2";
-import Paragraph from "../../../Components/Paragraph"
-import PrimaryBtn from "../../../Components/PrimaryBtn";
-import BootstrapIcon from "../../../Components/BootstrapIcon";
-import ninaCircle from "../../../assets/images/nina-ass.png";
-import "./styles.scss";
+import nina from "../../../assets/images/contact/1.png"
+import { FaWhatsapp, FaInstagram, FaRegEnvelope, FaLinkedinIn } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <>
-            <section id="contact" className="row rol-1 rol-lg-2 justify-content-center align-items-center">
-                <div className="row justify-content-center align-items-center container-lg">
-                    <div className="col-lg-6">
-                        <TitleH2 className="contact-title">
-                            Vamos criar algo juntos?
-                        </TitleH2>
-                        <Paragraph className="contact-paragraph lh-1">
-                            Se você precisa de fotos, vídeos, campanhas de tráfego ou conteúdos estratégicos para fortalecer sua marca, estou aqui para te ajudar.
-                        </Paragraph>
-                        <PrimaryBtn 
-                            href={"https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os."}
-                            className="col-6 d-none d-lg-block"
+        <section id="contact" className="flex justify-center text-center md:text-start md:pb-16">
+            <div className="flex flex-col md:flex-row items-center md:items-start md:gap-16">
+                <div>
+                    <h2 className="text-3xl md:ms-40">Vamos criar algo juntos?</h2>
+                    <p className="mx-6 md:ms-40 my-6">
+                        Se você precisa de fotos, vídeos, campanhas de tráfego ou conteúdos estratégicos para fortalecer sua marca, estou aqui para te ajudar.
+                    </p>
+                    <a
+                        href="https://wa.me/5532988600655"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Whatsapp da Nina"
+                        className="hidden md:inline-flex items-center justify-center mt-3 ms-40 px-6 py-1 bg-[#5A4A3B] text-[#F2E6D8] text-lg hover:opacity-80 styled-border"
+                    >
+                        <FaWhatsapp className="me-2" size={20} />
+                        Fale comigo
+                    </a>
+                    <div className="hidden md:flex my-5 justify-start items-center gap-4 ms-40">
+                        <a
+                            href="mailto:camurca.nina@gmail.com"
+                            aria-label="Envie um email para Nina"
+                            className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
                         >
-                            <BootstrapIcon name={"whatsapp"} /> Fale Comigo
-                        </PrimaryBtn>
-                        <div className="d-none d-lg-flex flex-row mt-3">
-                            <div className="d-flex flex-row  align-items-baseline gap-3">
-
-                                <a 
-                                    href="mailto:camurca.nina@gmail.com" 
-                                    target="_blank"
-                                    className="contact-link"
-                                >
-                                    <BootstrapIcon name={"envelope"} />
-                                </a>
-                                <a 
-                                    href="https://www.instagram.com/ninotica_?igsh=MTA3cmd5YnEzZWt5aA=="
-                                    target="_blank"
-                                    className="contact-link"
-                                
-                                >
-                                    <BootstrapIcon name={"instagram"}/>
-                                </a>
-                                <a 
-                                    href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os." 
-                                    target="_blank"
-                                    className="contact-link"
-                                >
-                                    <BootstrapIcon name={"whatsapp"}/>
-                                </a>
-                                <a 
-                                    href="https://www.linkedin.com/in/nina-pissolato-camur%C3%A7a-522560240/?originalSubdomain=br"
-                                    target="_blank"
-                                    className="contact-link"
-                                >
-                                    <BootstrapIcon name={"linkedin"}/>
-                                </a>
-                            </div>
-                            <div className="d-flex flex-column contact-info flex-row justify-content-center ps-5">
-                                <a 
-                                    href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os."
-                                    target="_blank"
-                                >
-                                    (32) 98860-0655
-                                </a>
-                                <a 
-                                    href="mailto:camurca.nina@gmail.com"
-                                    target="_blank"
-                                >camurca.nina@gmail.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row col-lg-6 justify-content-center">
-                        <img 
-                            src= {ninaCircle}
-                            alt="placeholder" 
-                            className="contact-img"
-                        />
-                        <PrimaryBtn 
-                            href={"https://wiki.pokexgames.com/index.php/Illusion_Quest#Entrada_do_Covil-2"}
-                            className="col-6 d-lg-none"
+                            <FaRegEnvelope size={34} />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/ninotica_?igsh=MTA3cmd5YnEzZWt5aA=="
+                            aria-label="Instagram da Nina"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
                         >
-                            <BootstrapIcon name={"whatsapp"} /> Fale Comigo
-                        </PrimaryBtn>
-                    </div>
-                    <div className="d-lg-none row row-1 justify-content-center align-items-center">
-                        <div className="my-5 d-flex gap-4 justify-content-center align-items-center">
-                            <a href="" className="contact-link">
-                                <BootstrapIcon name={"envelope"} />
-                            </a>
-                            <a href="" className="contact-link">
-                                <BootstrapIcon name={"instagram"}/>
-                            </a>
-                            <a href="" className="contact-link">
-                                <BootstrapIcon name={"whatsapp"}/>
-                            </a>
-                            <a href="" className="contact-link">
-                                <BootstrapIcon name={"linkedin"}/>
-                            </a>
-                        </div>
-                        <div className="row row-1 justify-content-center align-items-center contact-info">
+                            <FaInstagram size={34} />
+                        </a>
+                        <a 
+                            href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os."
+                            aria-label="Envie uma mensagem no whatsapp da Nina"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
+                        >
+                            <FaWhatsapp size={34} />
+                        </a>
+                        <a 
+                            href="https://www.linkedin.com/in/nina-pissolato-camur%C3%A7a-522560240/?originalSubdomain=br"
+                            aria-label="Linkedin da Nina"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
+                        >
+                            <FaLinkedinIn size={34} />
+                        </a>
+                        <div className="ml-4">
                             <a 
-                                href=""
-                                className="row row-1 justify-content-center"
+                                href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os." 
+                                aria-label="Entre em contato com Nina pelo whatsapp" rel="noopener noreferrer" 
+                                target="_blank"
+                            >
+                                (32) 98860-0655
+                            </a>
+                            <br />
+                            <a 
+                                href="mailto:camurca.nina@gmail.com"
+                                aria-label="Envie um email para Nina"
+                            >
+                                camurca.nina@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center">
+                    <img 
+                        src={nina} 
+                        alt="Nina Camurça" 
+                        loading="lazy"
+                        className="w-[60%] md:w-[100%] md:me-24 lg:w-[60%]"
+                    />
+                    <a
+                        href="https://wa.me/5532988600655"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Whatsapp da Nina"
+                        className="inline-flex md:hidden items-center justify-center mt-5 mx-14 px-6 py-1 bg-[#5A4A3B] text-[#F2E6D8] text-lg hover:opacity-80 styled-border"
+                    >
+                        <FaWhatsapp className="me-2" size={20} />
+                        Fale comigo
+                    </a>
+
+                        <div className="flex md:hidden my-5 justify-center gap-4">
+                            <a
+                                href="mailto:camurca.nina@gmail.com"
+                                aria-label="Envie um email para Nina"
+                                className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
+                            >
+                                <FaRegEnvelope size={34} />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/ninotica_?igsh=MTA3cmd5YnEzZWt5aA=="
+                                aria-label="Instagram da Nina"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
+                            >
+                                <FaInstagram size={34} />
+                            </a>
+                            <a 
+                                href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os."
+                                aria-label="Envie uma mensagem no whatsapp da Nina"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
+                            >
+                                <FaWhatsapp size={34} />
+                            </a>
+                            <a 
+                                href="https://www.linkedin.com/in/nina-pissolato-camur%C3%A7a-522560240/?originalSubdomain=br"
+                                aria-label="Linkedin da Nina"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#25241F] text-[#F2E6D8] text-lg p-1 rounded-lg hover:opacity-80"
+                            >
+                                <FaLinkedinIn size={34} />
+                            </a>
+                        </div>
+
+                        <div className="flex md:hidden flex-col mt-5">
+                            <a 
+                                href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os." 
+                                aria-label="Entre em contato com Nina pelo whatsapp" rel="noopener noreferrer" 
+                                target="_blank"
                             >
                                 (32) 98860-0655
                             </a>
                             <a 
-                                href=""
-                                className="row row-1 justify-content-center"
-                            >camurca.nina@gmail.com</a>
+                                href="mailto:camurca.nina@gmail.com"
+                                aria-label="Envie um email para Nina"
+                            >
+                                camurca.nina@gmail.com
+                            </a>
                         </div>
-                    </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     )
 }

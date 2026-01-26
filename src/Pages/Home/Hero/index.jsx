@@ -1,57 +1,114 @@
-import TitleH1 from "../../../Components/TitleH1";
-import TitleH4 from "../../../Components/TitleH4"
-import PrimaryBtn from "../../../Components/PrimaryBtn";
-import BootstrapIcon from "../../../Components/BootstrapIcon";
-import nina from "../../../assets/images/profile.png";
-import background from "../../../assets/images/background.png"
 import "./styles.scss"
 
+import heroImg from "../../../assets/images/hero/1.png"
+
+import { FaWhatsapp } from "react-icons/fa";
+import { m, motion } from "framer-motion";
+import { Md10K } from "react-icons/md";
+
+const container = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.12,
+            delayChildren: 0.2,
+        },
+    },
+}
+
+const item = {
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut",
+        },
+    },
+}
+
+
+
 export default function Hero() {
+
     return (
-        <>
-            <div className="background">
-                <img 
-                    src={background} 
-                    alt="imagem de fundo" 
-                />
-            </div>
-            <section id="home" className="d-flex flex-column justify-content-center align-items-center flex-lg-row pt-lg-5 ps-lg-5">
-                <div className="d-flex flex-column align-items-center align-items-lg-start hero-card col-lg-4">
-                    <div className="hero-full-title mt-5 mt-lg-3 pt-lg-1">
-                        <div className="hero-title-present d-flex flex-row flex-lg-column justify-content-center">
-                            <TitleH1 className="hero-title ps-lg-1 mt-lg-5">
-                                Olá,
-                            </TitleH1>
-                            <TitleH1 className="ps-1 hero-title ps-lg-1 mb-lg-1" >
-                                eu sou a
-                            </TitleH1>
-                        </div>
-                        <TitleH1 className="hero-title nina">
-                            <span>Nina</span>
-                        </TitleH1>
-                    </div>
-                    <TitleH4 className="hero-text text-center mb-4 mx-1 mt-lg-1 text-lg-start ps-lg-1">
-                        Transformo ideias em conteúdo, estratégias e resultados.
-                    </TitleH4>
-                    <PrimaryBtn 
-                        href={"https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os."}
-                        className="hero-btn mb-5 ms-lg-2"
+        <section id="home" className="min-h-screen flex items-center px-6 mt-20 md:mt-0">
+            <div className="
+                w-full max-w-6xl
+                mx-auto
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                gap-10
+                items-center
+            ">
+                {/* Conteúdo  */}
+                <motion.div 
+                    className="text-center md:text-start md:mx-9 mt-6 md:mt-0 md:px-9"
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                >
+                    <motion.p 
+                        className="text-4xl md:text-xl lg:text-3xl text-[#25241F] -mb-5 md:-mb-3"
+                        variants={item}
                     >
-                        <BootstrapIcon 
-                            name={"whatsapp"} 
-                            className="icon"
-                        /> 
-                        Fale comigo
-                    </PrimaryBtn>
-                </div>
-                <div className="d-flex justify-content-center align-items-center col-lg-7">
+                        Olá, <br className="hidden md:block" /> eu sou a
+                    </motion.p>
+                    <motion.h1 
+                        className="text-9xl md:text-7xl lg:text-8xl font-bold leading-tight "
+                        variants={item}
+                    >
+                        Nina
+                    </motion.h1>
+                    <motion.p 
+                        className="text-lg md:text-base lg:text-xl leading-relaxed mb-6 text-[#25241F] -mt-5 md:-mt-3"
+                        variants={item}
+                    >
+                        Transformo ideias em imagens, <br className="md:hidden lg:block"/>
+                        estratégias em resultados.
+                    </motion.p>
+                    <motion.button className="
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-8
+                        py-1
+                        bg-[#5A4A3B]
+                        text-[#F2E6D8]
+                        text-lg
+                        font-normal
+                        transition
+                        styled-border
+                        cursor-pointer
+                    "
+                    variants={item}
+                    whileHover={{opacity: 0.8}}
+                    >
+                        <FaWhatsapp className="me-2" /> Fale comigo
+                    </motion.button>
+                </motion.div>
+
+                {/* Imgem  */}
+                <motion.div className="flex justify-center "
+                    initial={{opacity: 0, y: 30}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.6, ease: "easeOut", delay: 0.6}}
+                >
                     <img 
-                        src={nina}
-                        alt="Nina Camurça foto."
-                        className="hero-img"
+                        src={heroImg} 
+                        alt="Foto da Nina" 
+                        className="
+                            w-[70%]
+                            lg:w-[60%]
+                        "
                     />
-                </div>
-            </section>
-        </>
+                </motion.div>
+            </div>
+        </section>
     )
 }

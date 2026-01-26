@@ -1,32 +1,50 @@
-@use "../../Styles/breakpoints.scss" as *;
-@use "../../Styles/variables.scss" as *;
-@use "../../Styles/global.scss";
-
-#service-pages {
+#service-page {
+    position: relative;
+    min-height: 100vh;
     overflow: hidden;
-    background-color: $beige;
-    background-image:
-    linear-gradient(rgba(242, 230, 216, 0.3), rgba(242, 230, 216, 0.3)),
-        url("../../assets/images/background-fundo-marrom.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
+    z-index: 0; // cria contexto
 
-    #gallery-container {
-        // display: flex;
-        margin: 3rem 1rem;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
         width: 100%;
-        background-color: $dark-brown;
-        padding: 0;
-        // overflow: hidden;
-        border-radius: 0 35px 35px 0;
-        height: auto;
-        overflow: visible;
-        @include up($md) {
-            margin: 5rem;
-            height: 70vh;
-            width: 70vw;
-            overflow: hidden;
-        }
+        height: 62vh;
+
+        background-image: url("../../assets/images/home/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        opacity: 0.6;
+        z-index: -1;  
+    }
+}
+
+
+#gallery-bg {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 0; // cria contexto
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        width: 100%;
+        height: 60vh;
+
+        background-image: url("../../assets/images/home/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        opacity: 0.6;
+        z-index: -1;  
     }
 }

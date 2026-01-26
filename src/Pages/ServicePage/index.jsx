@@ -1,49 +1,54 @@
 import { useParams } from "react-router-dom";
-import { services } from "../../data/services.jsx";
+import { getServiceBySlug } from "../../Data/servicesData/index";
 
 import ServiceTitle from "../../Components/ServiceTitle";
 import ServiceHero from "../../Components/ServiceHero";
-import ServiceGallery from "../../Components/ServiceGallery";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Contact from "../Home/Contact";
+import GalleryServices from "../../Components/GalleryServices";
+
+import palette from "../../assets/images/about/palette.png";
 
 import "./styles.scss";
 
 export default function ServicePage() {
     const { slug } = useParams();
-
-    const service = services.find(
-        (item) => item.slug === slug
-    );
+    const service = getServiceBySlug(slug);
 
     if (!service) {
         return (
-            <div className="container py-5">
-                <h2>Serviço não encontrado</h2>
-                <p>O serviço que você procura não existe.</p>
+            <div className="py-20 text-center">
+                <h2 className="text-2xl font-semibold">
+                    Serviço não encontrado
+                </h2>
+                <p className="mt-2">
+                    O serviço que você procura não existe.
+                </p>
             </div>
         );
     }
 
     return (
-        <main id="service-pages">
-            <Navbar />
-            <ServiceTitle title={service.title} />
-            <ServiceHero 
-                description={service.description}
-                image={service.heroImage}
-                imageAlt={service.title}
-            />
+        <main id="service-page" className="overflow-hidden">
+            <div className="z-10">
+                <Navbar />
+                <ServiceTitle title={service.title} />
 
-            <div className="d-flex justify-content-center">
-                <div id="gallery-container">
-                    <ServiceGallery gallery={service.gallery} />
+                <ServiceHero 
+                    description={service.description}
+                    image={service.heroImage}
+                    imageAlt={service.title}
+                />
+                <div id="gallery-bg" className="px-4 pb-26 md:pb-16 mb-28">
+                    <GalleryServices gallery={service.gallery} />
                 </div>
+                <Contact />
+                <Footer />
             </div>
-
-            <Contact />
-            <Footer />
+            <div>
+                <img src={palette} alt="paleta decorativa" className="hidden -z-1 w-[1%] md:block absolute top-1/2" />
+            </div>
         </main>
-    );
+    )
 }

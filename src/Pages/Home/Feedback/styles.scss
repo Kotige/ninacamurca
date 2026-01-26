@@ -1,0 +1,35 @@
+#feedbacks-mobile {
+    border-radius: 65px 65px 0px 0;
+}
+
+#feedbacks-desktop {
+    border-radius: 0 65px 65px 0;
+}
+
+#feedbacks {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        background: url("../../../assets/images/home/bg.png") top / cover no-repeat;
+        z-index: 0;
+        opacity: 0.6;
+    }
+
+    @media (min-width: 768px) {
+        &::before {
+            height: 15vh;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &::before {
+            height: 20vh;
+        }
+    }
+}
