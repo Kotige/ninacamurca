@@ -6,8 +6,8 @@ export default function Contact() {
         <section id="contact" className="flex justify-center text-center md:text-start md:pb-16">
             <div className="flex flex-col md:flex-row items-center md:items-start md:gap-16">
                 <div>
-                    <h2 className="text-3xl md:ms-40">Vamos criar algo juntos?</h2>
-                    <p className="mx-6 md:ms-40 my-6">
+                    <h2 className="mx-4 text-3xl md:ms-40">Vamos criar algo juntos?</h2>
+                    <p className="mx-6 md:ms-40 my-6 text-sm">
                         Se você precisa de fotos, vídeos, campanhas de tráfego ou conteúdos estratégicos para fortalecer sua marca, estou aqui para te ajudar.
                     </p>
                     <a
@@ -91,7 +91,7 @@ export default function Contact() {
                         Fale comigo
                     </a>
 
-                        <div className="flex md:hidden my-5 justify-center gap-4">
+                        <div className="flex md:hidden my-10 justify-center gap-4">
                             <a
                                 href="mailto:camurca.nina@gmail.com"
                                 aria-label="Envie um email para Nina"
@@ -128,7 +128,7 @@ export default function Contact() {
                             </a>
                         </div>
 
-                        <div className="flex md:hidden flex-col mt-5">
+                        <div className="flex md:hidden flex-col mb-10">
                             <a 
                                 href="https://wa.me/5532988600655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os." 
                                 aria-label="Entre em contato com Nina pelo whatsapp" rel="noopener noreferrer" 
