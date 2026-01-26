@@ -36,7 +36,7 @@ const item = {
 export default function Hero() {
 
     return (
-        <section id="home" className="min-h-screen flex items-center px-6 mt-20 md:mt-0">
+        <section id="home" className="min-h-screen flex items-center px-6 mt-8 md:mt-0">
             <div className="
                 w-full max-w-6xl
                 mx-auto
