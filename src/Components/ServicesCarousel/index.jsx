@@ -38,7 +38,7 @@ export default function ServicesCarousel() {
                         <h3 className="text-xl text-center mb-4 bg-[#5A4A3B] inline-block px-4 rounded-r-[10px]">
                         {activeItem.title}
                     </h3>
-                    <p className="mx-0 mb-3 text-sm">
+                    <p className="md:mx-24 mb-3 text-sm">
                         {activeItem.description}
                     </p>
                     </div>
