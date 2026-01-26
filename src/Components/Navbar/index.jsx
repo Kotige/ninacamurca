@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
     const navLinks = [
@@ -14,6 +15,15 @@ export default function Navbar() {
         { label: "Feedbacks", href: "#feedbacks" },
         { label: "Contato", href: "#contact" },
     ];
+
+    useEffect(() => {
+        function handleScroll() {
+            const triggerPoint = window.innerHeight * 0.1;
+            setScrolled(window.scrollY > triggerPoint);
+        }
+
+        window.addEventListener("scroll", handleScroll);
+    }, []);
 
     function handleAnchorClick(href) {
         setOpen(false);
@@ -30,31 +40,43 @@ export default function Navbar() {
     }
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50">
-        <nav className="relative flex items-center px-4 py-4 md:px-10 justify-end md:justify-center">
-            {/* Desktop Menu */}
-            <ul className="hidden md:flex gap-8 text-sm font-normal text-[#5A4A3B]">
-            {navLinks.map((link) => (
-                <li key={link.label}>
-                <button
-                    onClick={() => handleAnchorClick(link.href)}
-                    className="hover:text-[#A67152] transition-colors hover:cursor-pointer"
-                >
-                    {link.label}
-                </button>
-                </li>
-            ))}
-            </ul>
+        <header className="fixed -top-6 left-0 w-full z-50">
+            <nav className="relative flex items-center px-4 py-6 md:px-10 justify-end md:justify-center">
+                {/* Desktop Menu */}
+                <div className={`
+                        hidden md:flex items-center
+                        px-8 py-3
+                        rounded-b-full
+                        transition-all duration-300
+                        ${
+                            scrolled
+                                ? "bg-[#F2E6D8]/60 backdrop-blur-md shadow-lg"
+                                : "bg-transparent"
+                        }
+                    `}>
+                        <ul className="flex gap-8 text-sm font-normal text-[#5A4A3B]">
+                            {navLinks.map((link) => (
+                                <li key={link.label}>
+                                    <button
+                                        onClick={() => handleAnchorClick(link.href)}
+                                        className="hover:text-[#A67152] transition-colors cursor-pointer"
+                                    >
+                                        {link.label}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                </div>
 
-            {/* Mobile Button */}
-            <button
-            onClick={() => setOpen(true)}
-            className="flex justify-end md:hidden text-[#5A4A3B]"
-            aria-label="Abrir menu"
-            >
-            <Menu size={26} />
-            </button>
-        </nav>
+                {/* Mobile Button */}
+                <button
+                onClick={() => setOpen(true)}
+                className="flex justify-end md:hidden text-[#5A4A3B]"
+                aria-label="Abrir menu"
+                >
+                <Menu size={26} />
+                </button>
+            </nav>
 
         {/* Overlay */}
         <div
