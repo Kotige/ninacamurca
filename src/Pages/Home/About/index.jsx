@@ -7,12 +7,12 @@ export default function About() {
             className="relative w-full mt-16 lg:mt-0 py-16 bg-[#25241F]"
         >
             <div className="mx-0 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center z-10">
-                <div className="px-22 md:px-16 lg:px-8 lg:ms-32">
-                    <h2 className="text-3xl text-center md:text-start font-normal mb-4">
+                <div className="px-6 md:px-16 lg:px-8 lg:ms-32">
+                    <h2 className="text-3xl text-center md:text-start font-normal mb-8 md:mb-4">
                         Sobre Mim
                     </h2>
 
-                    <p className="text-base md:text-base text-[#F2E6D8] leading-relaxed text-center md:text-justify">
+                    <p className="text-base md:text-base text-[#F2E6D8] leading-relaxed text-center md:text-justify mb-6 md:mb-0">
                         Sou <b>Nina Camurça</b>, formada em Comunicação Social pela Universidade Federal
                         de Juiz de Fora, e atuo há mais de cinco anos no mercado <b>audiovisual</b> e de 
                         <b> marketing digital</b>. Durante minha formação, participei de diversas produções
