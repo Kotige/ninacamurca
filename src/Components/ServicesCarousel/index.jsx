@@ -35,10 +35,10 @@ export default function ServicesCarousel() {
                 {/* Título ativo  */}
                 <div className="grid justify-center text-center">
                     <div className="inline-block text-[#F2E6D8]">
-                        <h3 className="text-xl text-center mb-4 bg-[#5A4A3B] inline-block px-4 rounded-active-title">
+                        <h3 className="text-xl text-center mb-4 bg-[#5A4A3B] inline-block px-4 rounded-r-[10px]">
                         {activeItem.title}
                     </h3>
-                    <p className="mx-6 mb-3">
+                    <p className="mx-0 mb-3 text-sm">
                         {activeItem.description}
                     </p>
                     </div>
@@ -50,7 +50,7 @@ export default function ServicesCarousel() {
                         onClick={() => handleNavigate(activeItem.slug)}
                         className="mx-auto block w-full max-w-sm"
                     >
-                        <div className="aspect-square overflow-hidden rounded-img">
+                        <div className="aspect-square overflow-hidden rounded-r-[55px]">
                             <img 
                                 src={activeItem.image} 
                                 alt={activeItem.title}
@@ -61,7 +61,7 @@ export default function ServicesCarousel() {
 
                     <button
                         onClick={nextItem}
-                        className="absolute top-1/2 right-0 -translate-y-1/2 h-12 w-12 flex items-center justify-center"
+                        className="absolute top-1/2 -right-10 -translate-y-1/2 h-12 w-12 flex items-center justify-center"
                     >
                         <ChevronRight size={46}/>
                     </button>
@@ -74,7 +74,7 @@ export default function ServicesCarousel() {
                             <li key={item.slug}>
                                 <button
                                     onClick={() => setActiveIndex(index)}
-                                    className={"text-sm bg-[#5A4A3B] text-[#F2E6D8] px-2 rounded-small-titles"}
+                                    className={"text-xs bg-[#5A4A3B] text-[#F2E6D8] px-3 py-1 rounded-r-[8px]"}
                                 >
                                     {item.title}
                                 </button>
@@ -90,11 +90,11 @@ export default function ServicesCarousel() {
                         <div key={item.slug}
                             className="flex flex-col items-center text-center"
                         >
-                            <h3 className="text-xl mb-3 bg-[#5A4A3B] text-[#F2E6D8] px-6 py-1 rounded-active-title">
+                            <h3 className="text-xl bg-[#5A4A3B] text-[#F2E6D8] px-6 py-1 rounded-r-[13px]">
                                 {item.title}
                             </h3>
 
-                            <p className="mb-4  text-[#F2E6D8] text-xs mx-8">
+                            <p className="my-5  text-[#F2E6D8] text-xs mx-8">
                                 {item.description}
                             </p>
 
@@ -102,7 +102,7 @@ export default function ServicesCarousel() {
                                 onClick={() => handleNavigate(item.slug)}
                                 className="w-full max-w-[25vw]"
                             >
-                                <div className="aspect-square overflow-hidden rounded-img">
+                                <div className="aspect-square overflow-hidden rounded-r-[55px]">
                                     <img 
                                         src={item.image} 
                                         alt={item.title}
@@ -124,12 +124,12 @@ export default function ServicesCarousel() {
                 </div>
                 {/* Lista de Títulos */}
                 <div className="flex justify-center">
-                    <ul className="flex flex-wrap justify-center gap-4 mx-36">
+                    <ul className="flex flex-wrap justify-center gap-4 mx-30">
                         {services.map((item, index) => (
                             <li key={item.slug}>
                                 <button
                                     onClick={() => setActiveIndex(index)}
-                                    className={"text-sm bg-[#5A4A3B] text-[#F2E6D8] px-2 rounded-small-titles cursor-pointer"}
+                                    className={"text-sm bg-[#5A4A3B] text-[#F2E6D8] px-3 py-1 rounded-r-[10px] cursor-pointer"}
                                 >
                                     {item.title}
                                 </button>
