@@ -1,9 +1,0 @@
-@use "../../Styles/breakpoints.scss" as *;
-@use "../../Styles/variables.scss";
-
-p {
-    text-align: center;
-    @include up($lg) {
-        text-align: justify;
-    }
-}
