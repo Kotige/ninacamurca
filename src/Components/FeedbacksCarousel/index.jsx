@@ -12,7 +12,7 @@ export default function FeedbacksCarousel() {
     }
 
     return (
-        <section className="w-full h-[80vh] relative flex items-center justify-center">
+        <section className="w-full h-auto py-4 relative flex items-center justify-center">
             {/* Images Container  */}
             <div className="w-full h-full  flex items-center justify-center">
                 {/* Active Image  */}
