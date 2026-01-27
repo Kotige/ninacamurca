@@ -61,7 +61,7 @@ export default function ServicesCarousel() {
 
                     <button
                         onClick={nextItem}
-                        className="absolute top-1/2 -right-10 -translate-y-1/2 h-12 w-12 flex items-center justify-center"
+                        className="absolute top-1/2 -right-12 -translate-y-1/2 h-12 w-12 flex items-center justify-center"
                     >
                         <ChevronRight size={46}/>
                     </button>
