@@ -71,7 +71,7 @@ export default function Navbar() {
                 {/* Mobile Button */}
                 <button
                 onClick={() => setOpen(true)}
-                className="flex justify-end md:hidden text-[#5A4A3B]"
+                className="flex justify-end md:hidden text-[#5A4A3B] mt-6"
                 aria-label="Abrir menu"
                 >
                 <Menu size={26} />
@@ -88,7 +88,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <aside
             className={`fixed top-0 right-0 h-full w-72
-            bg-white/30 backdrop-blur-xl border-l border-white/40
+            bg-white/30 backdrop-blur-xl
             transform transition-transform duration-300 ease-out
             ${open ? "translate-x-0" : "translate-x-full"}`}
         >

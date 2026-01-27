@@ -10,9 +10,9 @@ import "./styles.scss"
 
 export default function Home() {
     return (
-        <main className="">
+        <main>
             <div className="bg-home" />
-            <div className="">
+            <div>
                 <Navbar />
                 <Hero />
                 <About />
