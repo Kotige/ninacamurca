@@ -1,24 +1,21 @@
-.main-home {
+main {
     position: relative;
-    min-height: 100vh;
     overflow: hidden;
-    z-index: 0; // cria contexto
+}
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+.bg-home {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-        width: 100vw;
-        height: 62vh;
+    width: 100%;
+    height: 63vh;
 
-        background-image: url("../../assets/images/home/bg.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    background-image: url("../../assets/images/home/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-        opacity: 0.6;
-        z-index: -1;  
-    }
+    z-index: 0;
+    opacity: 0.6;
 }

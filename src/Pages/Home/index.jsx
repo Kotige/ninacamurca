@@ -10,8 +10,9 @@ import "./styles.scss"
 
 export default function Home() {
     return (
-        <main className="main-home">
-            <div className="z-10">
+        <main className="">
+            <div className="bg-home" />
+            <div className="">
                 <Navbar />
                 <Hero />
                 <About />
